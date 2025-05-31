@@ -778,7 +778,7 @@
 
 { theme: "OE - Estructuras", question: "Las organizaciones misionarias reformadoras:", options: ["Se orientan a fomentar cambios radicales en la sociedad.", "Intentan cambiar la sociedad cambiando la conducta de sus propios miembros de acuerdo con su misión. Estas son las conservadoras.", "Prefieren una variable de la estructura simple.", "Son una variable de la estructura simple."], answer: 0 },
 
-{ theme: "OE - Estructuras", question: "Analice la siguiente afirmación: \"En las burocracias profesionales, los miembros de la línea media suelen ser elegidos, o al menos consentidos, por los operarios del núcleo de operaciones\".", options: ["Falso, esto ocurre en la adhocracia administrativa.", "Falso, esto ocurre en la burocracia maquinal. (no 100%)", "Falso, esto ocurre en la estructura simple. (no 100%)", "Verdadero. En las burocracias profesionales, los operarios del núcleo de operaciones tienen un alto grado de autonomía y profesionalismo. Debido a esto, suelen tener una influencia significativa en la selección o consentimiento de los miembros de la línea media, ya que es fundamental que haya"], answer: 3 }
+{ theme: "OE - Estructuras", question: "Analice la siguiente afirmación: \"En las burocracias profesionales, los miembros de la línea media suelen ser elegidos, o al menos consentidos, por los operarios del núcleo de operaciones\".", options: ["Falso, esto ocurre en la adhocracia administrativa.", "Falso, esto ocurre en la burocracia maquinal. (no 100%)", "Falso, esto ocurre en la estructura simple. (no 100%)", "Verdadero. En las burocracias profesionales, los operarios del núcleo de operaciones tienen un alto grado de autonomía y profesionalismo. Debido a esto, suelen tener una influencia significativa en la selección o consentimiento de los miembros de la línea media, ya que es fundamental que haya"], answer: 3 },
 
 // --- EJEMPLO EXAMEN ORGANIZACIÓN EMPRESAS ---
 { theme: "OE - Ejemplo Examen", question: "1. ¿Cómo se coordinan las actividades relacionadas con el desarrollo y autorización del Manual de Calidad?", options: ["Normalización de procesos", "Normalización de valores", "Adaptación Mutua", "Supervisión Directa"], answer: 2 },
@@ -799,8 +799,7 @@
 
 { theme: "OE - Ejemplo Examen", question: "9. Indique la veracidad/falsedad de la siguiente afirmación: *Si la forma divisional se hibrida con la estructura burocrática maquinal se produce una forma divisional socializada\".", options: ["Falso, se produce una forma divisional de subproductos.", "Verdadero.", "Falso, se produce una burocracia duplicada.", "Falso, se produce una forma divisional integrada."], answer: 2 },
 
-{ theme: "OE - Ejemplo Examen", question: "10. Indique la veracidad/falsedad de la siguiente afirmación (esta pregunta parece una repetición de la pregunta 9 en enunciado, pero las opciones son diferentes y se refieren a tipos de estructuras en general): *Si la forma divisional se hibrida con la estructura burocrática maquinal se produce una forma divisional socializada\". (Asumiré que la pregunta busca identificar un tipo de estructura, y la respuesta C dada es 'Estructura Adhocrática', lo cual no tiene relación directa con la afirmación. Si la pregunta real era otra, por favor, indícalo)", options: ["Burocracia Profesional", "Estructura misionera", "Estructura Adhocrática", "Forma divisional"], answer: 2 }
-
+{ theme: "OE - Ejemplo Examen", question: "10. Indique la veracidad/falsedad de la siguiente afirmación (esta pregunta parece una repetición de la pregunta 9 en enunciado, pero las opciones son diferentes y se refieren a tipos de estructuras en general): *Si la forma divisional se hibrida con la estructura burocrática maquinal se produce una forma divisional socializada\". (Asumiré que la pregunta busca identificar un tipo de estructura, y la respuesta C dada es 'Estructura Adhocrática', lo cual no tiene relación directa con la afirmación. Si la pregunta real era otra, por favor, indícalo)", options: ["Burocracia Profesional", "Estructura misionera", "Estructura Adhocrática", "Forma divisional"], answer: 2 },
 // --- PREGUNTAS V/F (Nuevo Bloque) ---
 { theme: "OE - VyF Centralización y Descentralización", question: "1. Las organizaciones centralizadas verticalmente pero descentralizadas horizontalmente de forma selectiva y limitada, ¿dan especial poder a los operarios?", options: ["Verdadero, los operarios ganan poder en este tipo de descentralización.", "Falso, en este tipo de descentralización se daría poder principalmente a la Tecnoestructura.", "Falso, el poder recae en el ápice estratégico.", "Verdadero, pero solo si la descentralización horizontal es amplia."], answer: 1 },
 
@@ -819,7 +818,7 @@
 { theme: "OE - VyF Hipótesis de Congruencia", question: "8. La Hipótesis 12, ¿afirma que las contingencias del entorno fomentan la diferenciación y por lo tanto descentralización selectiva (horizontal y vertical)?", options: ["Verdadero, esa es la consecuencia directa.", "Falso, la Hipótesis 12 (o relacionada) sugiere que las disparidades en el entorno fomentan la descentralización selectiva hacia constelaciones de trabajo, lo que implica descentralización horizontal y vertical selectiva.", "Falso, las contingencias del entorno siempre llevan a la centralización.", "Verdadero, pero solo si el entorno es complejo."], answer: 1 }
 ];
 
-        // HTML Elements
+      // HTML Elements
         const welcomeScreen = document.getElementById('welcome-screen');
         const quizScreen = document.getElementById('quiz-screen');
         const resultsScreen = document.getElementById('results-screen');
@@ -837,20 +836,20 @@
         const resetButtonResults = document.getElementById('reset-button-results');
         const resetButtonBlockEnd = document.getElementById('reset-button-block-end');
         const nextBlockButton = document.getElementById('next-block-button');
-        
+
         const correctAnswersCountLabel = document.getElementById('correct-answers-count');
         const incorrectAnswersCountLabel = document.getElementById('incorrect-answers-count');
         const remainingCountLabel = document.getElementById('remaining-count-label');
-        const currentScoreValueLabel = document.getElementById('current-score-value'); // NUEVO
+        const currentScoreValueLabel = document.getElementById('current-score-value');
 
         const finalCorrectAnswers = document.getElementById('final-correct-answers');
         const finalIncorrectAnswers = document.getElementById('final-incorrect-answers');
-        const finalScoreValueLabel = document.getElementById('final-score-value'); // NUEVO
+        const finalScoreValueLabel = document.getElementById('final-score-value');
         const blockCorrectAnswers = document.getElementById('block-correct-answers');
         const blockIncorrectAnswers = document.getElementById('block-incorrect-answers');
         const totalCorrectOnBlockEnd = document.getElementById('total-correct-on-block-end');
         const totalIncorrectOnBlockEnd = document.getElementById('total-incorrect-on-block-end');
-        const blockEndScoreValueLabel = document.getElementById('block-end-score-value'); // NUEVO
+        const blockEndScoreValueLabel = document.getElementById('block-end-score-value');
         const remainingOnBlockEnd = document.getElementById('remaining-on-block-end');
 
         // Quiz State Variables
@@ -859,14 +858,14 @@
         let currentQuestionIndex = 0;
         let totalCorrectAnswers = 0;
         let totalIncorrectAnswers = 0;
-        let currentScore = 0; // NUEVO
-        const BLOCK_SIZE = 40; 
+        let currentScore = 0;
+        const BLOCK_SIZE = 40;
         let blockCorrectCount = 0;
         let blockIncorrectCount = 0;
 
         // Scoring constants
-        const POINTS_CORRECT = 0.25; // NUEVO
-        const PENALTY_INCORRECT = POINTS_CORRECT / 3; // NUEVO
+        const POINTS_CORRECT = 0.25;
+        const PENALTY_INCORRECT = POINTS_CORRECT / 3;
 
 
         function shuffleArray(array) {
@@ -878,12 +877,17 @@
         }
 
         function resetQuiz() {
+            if (!allQuizQuestionsData || allQuizQuestionsData.length === 0) {
+                console.error("No hay preguntas cargadas en allQuizQuestionsData.");
+                alert("Error: No se pudieron cargar las preguntas del test.");
+                return;
+            }
             remainingQuestions = shuffleArray([...allQuizQuestionsData]);
             currentBlockQuestions = [];
             currentQuestionIndex = 0;
             totalCorrectAnswers = 0;
             totalIncorrectAnswers = 0;
-            currentScore = 0; // NUEVO: Resetear puntuación
+            currentScore = 0;
             blockCorrectCount = 0;
             blockIncorrectCount = 0;
 
@@ -892,10 +896,14 @@
             welcomeScreen.classList.add('active');
             totalQuestionsCountLabel.textContent = allQuizQuestionsData.length;
             feedbackMessage.textContent = '';
-            feedbackMessage.className = ''; 
+            feedbackMessage.className = '';
             optionButtons.forEach(btn => {
                 btn.className = 'option-button';
+                btn.style.display = 'inline-block'; // Asegurar que los botones sean visibles al reiniciar
             });
+            // La lógica de localStorage para 'quizState' no está completa,
+            // ya que no se guarda el estado. Por ahora, el botón de reinicio en bienvenida
+            // probablemente no aparecerá a menos que se añada 'quizState' manualmente.
             if (localStorage.getItem('quizState')) {
                 resetButtonWelcome.style.display = 'inline-block';
             } else {
@@ -917,7 +925,7 @@
         }
 
         function startNewBlock() {
-            hideAllScreens();
+            hideAllScreens(); // Asegurar que solo la pantalla del quiz esté activa
             quizScreen.classList.add('active');
 
             blockCorrectCount = 0;
@@ -929,46 +937,69 @@
             }
 
             const numQuestionsForBlock = Math.min(BLOCK_SIZE, remainingQuestions.length);
-            
-            currentBlockQuestions = [];
-            let questionsToMove = [];
 
-            for (let i = 0; i < numQuestionsForBlock; i++) {
-                if (remainingQuestions.length > 0) {
-                     questionsToMove.push(remainingQuestions.pop());
-                } else {
-                    break; 
-                }
-            }
-            currentBlockQuestions = shuffleArray(questionsToMove); 
+            // Tomar preguntas del INICIO de remainingQuestions y eliminarlas del array original
+            currentBlockQuestions = remainingQuestions.splice(0, numQuestionsForBlock);
+            currentBlockQuestions = shuffleArray(currentBlockQuestions); // Barajar el bloque seleccionado
 
             currentQuestionIndex = 0;
+            // displayCurrentQuestion se encargará de llamar a showBlockResults si currentBlockQuestions está vacío
             displayCurrentQuestion();
         }
 
         function displayCurrentQuestion() {
             if (currentQuestionIndex < currentBlockQuestions.length) {
                 const currentQ = currentBlockQuestions[currentQuestionIndex];
+
+                // Comprobación robusta de la pregunta actual
+                if (!currentQ || typeof currentQ.question !== 'string' || !Array.isArray(currentQ.options) || typeof currentQ.answer !== 'number') {
+                    console.error('Error: Datos de pregunta inválidos o malformados.', currentQ);
+                    feedbackMessage.textContent = 'Error al cargar la pregunta. Saltando a la siguiente...';
+                    feedbackMessage.className = 'incorrect-feedback';
+                    
+                    // Intentar saltar esta pregunta
+                    currentQuestionIndex++;
+                    // Usar setTimeout para permitir que el mensaje de feedback se vea y evitar bucles rápidos
+                    setTimeout(() => {
+                        displayCurrentQuestion(); // Intentar mostrar la siguiente o finalizar bloque
+                    }, 100);
+                    return;
+                }
+
                 questionNumberLabel.textContent = `Pregunta ${currentQuestionIndex + 1} de ${currentBlockQuestions.length} (Tema: ${currentQ.theme || 'General'})`;
                 questionLabel.textContent = currentQ.question;
 
                 optionButtons.forEach((button, index) => {
-                    button.textContent = currentQ.options[index];
+                    if (index < currentQ.options.length && typeof currentQ.options[index] === 'string') {
+                        button.textContent = currentQ.options[index];
+                        button.style.display = 'inline-block'; // Asegurar visibilidad
+                    } else {
+                        // Si falta una opción o es inválida, ocultar el botón
+                        button.textContent = '';
+                        button.style.display = 'none';
+                    }
                     button.disabled = false;
-                    button.className = 'option-button'; 
+                    button.className = 'option-button';
                 });
 
                 nextButton.disabled = true;
                 feedbackMessage.textContent = '';
-                feedbackMessage.className = ''; 
+                feedbackMessage.className = '';
                 updateScoreDisplay();
             } else {
+                // No hay más preguntas en este bloque o el bloque estaba vacío
                 showBlockResults();
             }
         }
 
         function checkAnswer(selectedIndex) {
             const currentQ = currentBlockQuestions[currentQuestionIndex];
+            // Validar que currentQ y answer existen antes de usarlos
+            if (!currentQ || typeof currentQ.answer === 'undefined') {
+                console.error("Error en checkAnswer: currentQ o currentQ.answer no definidos.");
+                nextQuestion(); // Intentar saltar si hay un problema
+                return;
+            }
             const correctAnswerIndex = currentQ.answer;
 
             optionButtons.forEach(button => button.disabled = true);
@@ -980,16 +1011,19 @@
                 optionButtons[selectedIndex].classList.add('correct-option');
                 totalCorrectAnswers++;
                 blockCorrectCount++;
-                currentScore += POINTS_CORRECT; // NUEVO: Sumar puntos
+                currentScore += POINTS_CORRECT;
             } else {
                 feedbackMessage.textContent = `¡Incorrecto! La respuesta correcta era: "${currentQ.options[correctAnswerIndex]}"`;
                 feedbackMessage.className = 'incorrect-feedback';
                 optionButtons[selectedIndex].classList.add('incorrect-user-choice');
-                optionButtons[correctAnswerIndex].classList.add('correct-option'); 
+                if (optionButtons[correctAnswerIndex]) { // Comprobar que el botón existe
+                    optionButtons[correctAnswerIndex].classList.add('correct-option');
+                }
                 totalIncorrectAnswers++;
                 blockIncorrectCount++;
-                currentScore -= PENALTY_INCORRECT; // NUEVO: Restar puntos
-                remainingQuestions.unshift(currentQ); 
+                currentScore -= PENALTY_INCORRECT;
+                remainingQuestions.unshift(currentQ); // Añadir la pregunta fallada al inicio de la cola
+                remainingQuestions = shuffleArray(remainingQuestions); // Volver a barajar para que no salga inmediatamente
             }
             updateScoreDisplay();
         }
@@ -1003,7 +1037,7 @@
             correctAnswersCountLabel.textContent = totalCorrectAnswers;
             incorrectAnswersCountLabel.textContent = totalIncorrectAnswers;
             remainingCountLabel.textContent = `Preguntas restantes por responder: ${remainingQuestions.length}`;
-            currentScoreValueLabel.textContent = currentScore.toFixed(2); // NUEVO: Mostrar puntuación con 2 decimales
+            currentScoreValueLabel.textContent = currentScore.toFixed(2);
         }
 
         function showBlockResults() {
@@ -1013,17 +1047,25 @@
             blockIncorrectAnswers.textContent = blockIncorrectCount;
             totalCorrectOnBlockEnd.textContent = totalCorrectAnswers;
             totalIncorrectOnBlockEnd.textContent = totalIncorrectAnswers;
-            blockEndScoreValueLabel.textContent = currentScore.toFixed(2); // NUEVO
+            blockEndScoreValueLabel.textContent = currentScore.toFixed(2);
             remainingOnBlockEnd.textContent = remainingQuestions.length;
 
             if (remainingQuestions.length === 0) {
                 nextBlockButton.style.display = 'none';
-                resetButtonBlockEnd.textContent = 'Ver Resultados Finales';
-                resetButtonBlockEnd.onclick = showFinalResults;
+                // Modificar el botón para que lleve a los resultados finales si no hay más preguntas
+                const blockEndResetButton = document.getElementById('reset-button-block-end'); // Re-obtener por si acaso
+                if (blockEndResetButton) {
+                    blockEndResetButton.textContent = 'Ver Resultados Finales';
+                    blockEndResetButton.onclick = showFinalResults; // Cambiar el comportamiento
+                }
+
             } else {
                 nextBlockButton.style.display = 'inline-block';
-                resetButtonBlockEnd.textContent = 'Reiniciar Test';
-                resetButtonBlockEnd.onclick = resetQuiz;
+                const blockEndResetButton = document.getElementById('reset-button-block-end');
+                 if (blockEndResetButton) {
+                    blockEndResetButton.textContent = 'Reiniciar Test';
+                    blockEndResetButton.onclick = resetQuiz; // Restaurar comportamiento original
+                 }
             }
         }
 
@@ -1032,7 +1074,7 @@
             resultsScreen.classList.add('active');
             finalCorrectAnswers.textContent = totalCorrectAnswers;
             finalIncorrectAnswers.textContent = totalIncorrectAnswers;
-            finalScoreValueLabel.textContent = currentScore.toFixed(2); // NUEVO
+            finalScoreValueLabel.textContent = currentScore.toFixed(2);
         }
 
         // Event Listeners
@@ -1040,7 +1082,13 @@
         resetButton.addEventListener('click', resetQuiz);
         resetButtonWelcome.addEventListener('click', resetQuiz);
         resetButtonResults.addEventListener('click', resetQuiz);
-        resetButtonBlockEnd.addEventListener('click', resetQuiz); 
+        
+        // Asegurar que el botón de reinicio en block-end-screen tenga el listener correcto inicialmente
+        const initialResetButtonBlockEnd = document.getElementById('reset-button-block-end');
+        if (initialResetButtonBlockEnd) {
+            initialResetButtonBlockEnd.addEventListener('click', resetQuiz);
+        }
+        
         nextButton.addEventListener('click', nextQuestion);
         nextBlockButton.addEventListener('click', startNewBlock);
 
@@ -1053,5 +1101,3 @@
         // Initialize quiz
         document.addEventListener('DOMContentLoaded', resetQuiz);
     </script>
-</body>
-</html>
